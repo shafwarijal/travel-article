@@ -1,0 +1,72 @@
+@import 'tailwindcss' layer(components);
+
+.article-form-page {
+  @apply bg-gray-950 text-white;
+}
+
+.container-article-form-page {
+  @apply mx-auto max-w-4xl px-4 sm:px-6 lg:px-8;
+}
+
+.article-form-page-header {
+  @apply relative flex items-center justify-start py-4 pt-6;
+}
+
+.article-form-main {
+  @apply space-y-6;
+}
+
+.form-title {
+  @apply absolute left-1/2 -translate-x-1/2 text-lg font-bold;
+  background: linear-gradient(to bottom, #ffffff, #a0a0a0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.form-subtitle {
+  @apply mb-8 text-lg text-gray-400;
+}
+
+.article-form-card {
+  @apply border-gray-800 bg-gray-900/50 py-0;
+}
+
+.article-form-content {
+  @apply p-6;
+}
+
+.article-form {
+  @apply space-y-6;
+}
+
+.article-form input,
+.article-form textarea,
+.article-form [role='combobox'] {
+  @apply border-gray-700 bg-gray-950 text-white placeholder:text-gray-500 focus:border-blue-500 focus:ring-blue-500;
+}
+
+.image-preview {
+  @apply mt-3 overflow-hidden rounded-lg border border-gray-800 bg-gray-900;
+}
+
+.image-preview img {
+  @apply h-64 w-full object-cover;
+}
+
+.form-actions {
+  @apply mt-8 flex items-center justify-end gap-3 border-gray-800;
+}
+
+.loading-state,
+.error-state {
+  @apply flex min-h-[400px] flex-col items-center justify-center gap-4 p-8 text-center;
+}
+
+.loading-state {
+  @apply text-gray-400;
+}
+
+.error-state h2 {
+  @apply text-xl font-semibold text-white;
+}

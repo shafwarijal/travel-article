@@ -1,0 +1,83 @@
+@import 'tailwindcss' layer(components);
+
+.main-layout {
+  @apply mx-auto min-h-screen max-w-7xl bg-gray-950 px-4 text-white sm:px-6 lg:px-8;
+}
+
+/* Header */
+.main-header {
+  @apply fixed top-0 right-0 left-0 z-50 border-b border-gray-800 bg-gray-950/95 backdrop-blur-sm;
+}
+
+.container {
+  @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+.header-content {
+  @apply flex items-center justify-between py-4;
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  @apply flex cursor-pointer items-center gap-2 text-xl font-bold transition-opacity hover:opacity-80;
+}
+
+.logo-icon {
+  @apply text-2xl;
+}
+
+/* Navigation Menu */
+.nav-menu {
+  @apply hidden gap-8 md:flex;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-link {
+  @apply text-sm font-medium text-gray-300 transition-all hover:text-white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, #3b82f6, #8b5cf6);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link:focus {
+  @apply text-cyan-400 outline-none;
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+}
+
+.header-actions {
+  @apply flex items-center gap-3;
+}
+
+.user-avatar-button {
+  @apply h-10 w-10;
+}
+
+.user-avatar {
+  @apply flex h-8 w-8 items-center justify-center rounded-full bg-linear-to-br from-orange-500 to-pink-500 text-sm font-bold text-white;
+}
+
+/* Main Content */
+.main-content {
+  @apply pt-16;
+}

@@ -1,0 +1,86 @@
+@import 'tailwindcss' layer(components);
+
+.login-container {
+  @apply flex min-h-screen w-screen items-center justify-center overflow-hidden bg-gray-950;
+  background:
+    radial-gradient(
+      ellipse at top,
+      rgba(59, 130, 246, 0.15) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at bottom,
+      rgba(139, 92, 246, 0.15) 0%,
+      transparent 50%
+    ),
+    #030712;
+}
+
+.login-main-content {
+  @apply flex h-full w-full flex-1 flex-row;
+}
+
+.login-left {
+  @apply hidden flex-1 items-center justify-center px-12 lg:flex;
+  position: relative;
+}
+
+.login-left::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(
+    circle,
+    rgba(59, 130, 246, 0.1) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  filter: blur(40px);
+}
+
+.login-left::after {
+  content: '';
+  position: absolute;
+  bottom: 20%;
+  right: 10%;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(
+    circle,
+    rgba(139, 92, 246, 0.1) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  filter: blur(40px);
+}
+
+.login-hero-content {
+  @apply relative z-10 max-w-xl text-center;
+}
+
+.login-hero-icon {
+  @apply mx-auto mb-8 flex h-24 w-24 items-center justify-center rounded-full;
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  box-shadow:
+    0 10px 40px rgba(59, 130, 246, 0.3),
+    0 0 80px rgba(139, 92, 246, 0.2);
+}
+
+.login-left h1 {
+  @apply mb-6 text-5xl leading-tight font-bold tracking-tight md:text-6xl lg:text-7xl;
+  background: linear-gradient(to bottom, #ffffff, #a0a0a0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.login-left p {
+  @apply text-lg text-gray-400 md:text-xl;
+}
+
+.login-right {
+  @apply flex h-full w-full flex-1 flex-col items-center justify-center px-10;
+}
