@@ -227,7 +227,3 @@ This project is open source and available under the [MIT License](LICENSE).
 ---
 
 Made with ❤️ by Shafwatur Rijal
-
-```
->>>>>>> f4f6fef (feat: Initial commit with project setup and login page)
-```
