@@ -10,11 +10,8 @@ A modern travel article platform built with React, TypeScript, and Vite. Share y
 - 🏷️ **Category System** - Organize articles by categories
 - 💬 **Comments** - Engage with articles through comments
 - 🌐 **Internationalization** - Multi-language support (English & Indonesian)
-- 🎨 **Theme Switcher** - Light and dark mode support
 - 📱 **Responsive Design** - Mobile-friendly interface
-- ♾️ **Infinite Scroll** - Seamless browsing experience
 - 🔍 **Category Filtering** - Filter articles by category
-- 📤 **Social Sharing** - Share articles on social media
 
 ## 🚀 Tech Stack
 
@@ -126,7 +123,7 @@ travel-article/
 
 ### Authentication
 
-- JWT-based authentication
+- Authentication
 - Protected routes for authenticated users
 - Persistent auth state with Zustand
 
@@ -135,8 +132,6 @@ travel-article/
 - Create articles with title, description, cover image, and content
 - Edit your own articles
 - Delete functionality
-- Category assignment
-- Rich text content support
 
 ### Comments System
 
@@ -152,8 +147,6 @@ travel-article/
 
 ### Theme System
 
-- Light and dark mode
-- Theme switcher component
 - Persistent theme preference
 
 ## 🔐 Environment Variables
@@ -234,7 +227,6 @@ This project is open source and available under the [MIT License](LICENSE).
 ---
 
 Made with ❤️ by Shafwatur Rijal
-]);
 
 ```
 >>>>>>> f4f6fef (feat: Initial commit with project setup and login page)

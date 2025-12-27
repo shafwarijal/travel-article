@@ -351,7 +351,7 @@ const LandingPage = () => {
                         size="lg"
                         onClick={handleLoadMorePreview}
                         disabled={isLoadingMoreArticles}
-                        className="min-w-[200px]"
+                        className="min-w-50 cursor-pointer"
                       >
                         <FormattedMessage id="landing.articles.viewMore" />
                       </Button>
