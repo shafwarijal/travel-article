@@ -1,169 +1,241 @@
-<<<<<<< HEAD
-# travel-article
+# 🌍 Travel Article
 
+A modern travel article platform built with React, TypeScript, and Vite. Share your travel experiences, discover new destinations, and connect with fellow travelers.
 
+## ✨ Features
 
-## Getting started
+- 🔐 **Authentication System** - Secure user registration and login
+- 📝 **Article Management** - Create, edit, and delete travel articles
+- 🖼️ **Rich Content** - Support for cover images and detailed descriptions
+- 🏷️ **Category System** - Organize articles by categories
+- 💬 **Comments** - Engage with articles through comments
+- 🌐 **Internationalization** - Multi-language support (English & Indonesian)
+- 🎨 **Theme Switcher** - Light and dark mode support
+- 📱 **Responsive Design** - Mobile-friendly interface
+- ♾️ **Infinite Scroll** - Seamless browsing experience
+- 🔍 **Category Filtering** - Filter articles by category
+- 📤 **Social Sharing** - Share articles on social media
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+## 🚀 Tech Stack
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+### Frontend
 
-## Add your files
+- **React 19** - Modern React with latest features
+- **TypeScript** - Type-safe development
+- **Vite** - Fast build tool and dev server
+- **React Router v7** - Client-side routing
+- **TanStack Query** - Server state management
+- **Zustand** - Client state management
+- **React Hook Form** - Form handling with validation
+- **Zod** - Schema validation
 
-* [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-* [Add files using the command line](https://docs.gitlab.com/topics/git/add_files/#add-files-to-a-git-repository) or push an existing Git repository with the following command:
+### Styling
+
+- **Tailwind CSS v4** - Utility-first CSS framework
+- **Radix UI** - Accessible UI components
+- **Lucide React** - Beautiful icons
+- **Class Variance Authority** - Component variants
+
+### Internationalization
+
+- **React Intl** - Internationalization framework
+
+### HTTP Client
+
+- **Axios** - Promise-based HTTP client
+
+## 📋 Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- **Node.js** (v18 or higher)
+- **npm** or **yarn** or **pnpm**
+
+## 🛠️ Installation
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/shafwarijal/travel-article.git
+   cd travel-article
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables**
+
+   Create a `.env` file in the root directory:
+
+   ```env
+   VITE_API_URL=your_api_url_here
+   ```
+
+4. **Run the development server**
+
+   ```bash
+   npm run dev
+   ```
+
+   The app will be available at `http://localhost:5000`
+
+## 📦 Available Scripts
+
+- `npm run dev` - Start development server on port 5000
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+- `npm run format` - Format code with Prettier
+
+## 🗂️ Project Structure
 
 ```
-cd existing_repo
-git remote add origin https://gitlab.com/shafwarijal/travel-article.git
-git branch -M main
-git push -uf origin main
+travel-article/
+├── public/              # Static assets
+├── src/
+│   ├── app/            # Page components (Next.js-style routing)
+│   │   ├── landing/    # Landing page
+│   │   ├── login/      # Login page
+│   │   ├── register/   # Register page
+│   │   ├── article-detail/  # Article detail page
+│   │   └── article-form/    # Article create/edit form
+│   ├── components/     # Reusable components
+│   │   ├── features/   # Feature-specific components
+│   │   ├── layout/     # Layout components
+│   │   └── ui/         # UI components (shadcn-style)
+│   ├── contexts/       # React contexts
+│   ├── hooks/          # Custom React hooks
+│   ├── i18n/           # Internationalization
+│   │   └── locales/    # Translation files
+│   ├── lib/            # Library configurations
+│   │   └── validations/ # Zod schemas
+│   ├── pages/          # Page implementations
+│   ├── services/       # API services
+│   ├── store/          # Zustand stores
+│   ├── types/          # TypeScript types
+│   └── utils/          # Utility functions
+├── .env                # Environment variables
+├── vercel.json         # Vercel configuration
+└── vite.config.ts      # Vite configuration
 ```
 
-## Integrate with your tools
+## 🎯 Key Features Explained
 
-* [Set up project integrations](https://gitlab.com/shafwarijal/travel-article/-/settings/integrations)
+### Authentication
 
-## Collaborate with your team
+- JWT-based authentication
+- Protected routes for authenticated users
+- Persistent auth state with Zustand
 
-* [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-* [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-* [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-* [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-* [Set auto-merge](https://docs.gitlab.com/user/project/merge_requests/auto_merge/)
+### Article Management
 
-## Test and Deploy
+- Create articles with title, description, cover image, and content
+- Edit your own articles
+- Delete functionality
+- Category assignment
+- Rich text content support
 
-Use the built-in continuous integration in GitLab.
+### Comments System
 
-* [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/)
-* [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-* [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-* [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-* [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+- Add comments to articles
+- View all comments with user information
+- Paginated comments loading
 
-***
+### Internationalization
 
-# Editing this README
+- English and Indonesian language support
+- Language switcher component
+- Persistent language preference
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+### Theme System
 
-## Suggestions for a good README
+- Light and dark mode
+- Theme switcher component
+- Persistent theme preference
 
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+## 🔐 Environment Variables
 
-## Name
-Choose a self-explaining name for your project.
+| Variable       | Description          | Required |
+| -------------- | -------------------- | -------- |
+| `VITE_API_URL` | Backend API base URL | Yes      |
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+## 🚀 Deployment
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+### Deploy to Vercel
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+1. **Install Vercel CLI** (optional)
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+   ```bash
+   npm install -g vercel
+   ```
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+2. **Deploy**
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+   ```bash
+   vercel
+   ```
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+   Or connect your GitHub repository to Vercel dashboard for automatic deployments.
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+### Build Settings
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+- **Build Command:** `npm run build`
+- **Output Directory:** `dist`
+- **Install Command:** `npm install`
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+## 📝 API Integration
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+This application requires a backend API. Configure the API URL in your `.env` file.
 
-## License
-For open source projects, say how it is licensed.
+Expected API endpoints:
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
-=======
-# React + TypeScript + Vite
+- `POST /api/auth/local/register` - User registration
+- `POST /api/auth/local` - User login
+- `GET /api/articles` - Get all articles
+- `GET /api/articles/:id` - Get article by ID
+- `POST /api/articles` - Create article
+- `PUT /api/articles/:id` - Update article
+- `DELETE /api/articles/:id` - Delete article
+- `GET /api/categories` - Get all categories
+- `GET /api/comments` - Get comments
+- `POST /api/comments` - Create comment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🤝 Contributing
 
-Currently, two official plugins are available:
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## React Compiler
+## 📄 License
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This project is open source and available under the [MIT License](LICENSE).
 
-## Expanding the ESLint configuration
+## 👤 Author
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+**Shafwatur Rijal**
 
-```js
-export default defineConfig([
-       globalIgnores(['dist']),
-       {
-              files: ['**/*.{ts,tsx}'],
-              extends: [
-                     // Other configs...
+- GitHub: [@shafwarijal](https://github.com/shafwarijal)
 
-                     // Remove tseslint.configs.recommended and replace with this
-                     tseslint.configs.recommendedTypeChecked,
-                     // Alternatively, use this for stricter rules
-                     tseslint.configs.strictTypeChecked,
-                     // Optionally, add this for stylistic rules
-                     tseslint.configs.stylisticTypeChecked,
+## 🙏 Acknowledgments
 
-                     // Other configs...
-              ],
-              languageOptions: {
-                     parserOptions: {
-                            project: ['./tsconfig.node.json', './tsconfig.app.json'],
-                            tsconfigRootDir: import.meta.dirname,
-                     },
-                     // other options...
-              },
-       },
+- [Vite](https://vitejs.dev/) - Next Generation Frontend Tooling
+- [React](https://react.dev/) - The library for web and native user interfaces
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- [Radix UI](https://www.radix-ui.com/) - Unstyled, accessible components
+- [TanStack Query](https://tanstack.com/query) - Powerful asynchronous state management
+
+---
+
+Made with ❤️ by Shafwatur Rijal
 ]);
-```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactDom from 'eslint-plugin-react-dom';
-import reactX from 'eslint-plugin-react-x';
-
-export default defineConfig([
-       globalIgnores(['dist']),
-       {
-              files: ['**/*.{ts,tsx}'],
-              extends: [
-                     // Other configs...
-                     // Enable lint rules for React
-                     reactX.configs['recommended-typescript'],
-                     // Enable lint rules for React DOM
-                     reactDom.configs.recommended,
-              ],
-              languageOptions: {
-                     parserOptions: {
-                            project: ['./tsconfig.node.json', './tsconfig.app.json'],
-                            tsconfigRootDir: import.meta.dirname,
-                     },
-                     // other options...
-              },
-       },
-]);
 ```
 >>>>>>> f4f6fef (feat: Initial commit with project setup and login page)
+```
